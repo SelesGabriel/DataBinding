@@ -1,0 +1,25 @@
+﻿@page "/counter"
+
+<h1>@Mensagem</h1>
+
+<input type="text" @bind="@Mensagem" />
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    public string Mensagem { get; set; }
+    private int currentCount = 0;
+
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    public void AtualizaMensagem()
+    {
+        Mensagem = "Olá";
+    }
+}
